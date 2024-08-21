@@ -9,15 +9,84 @@
 </head>
 
 <body>
-    <form method="post" action="buscar.php" id="formulario-busqueda">
-        <label><input type="checkbox" name="numero"> Número</label>
-        <label><input type="checkbox" name="texto"> Texto</label>
-        <br>
-        <input type="search" name="busqueda" id="busqueda">
-        <input type="submit" value="Buscar">
-    </form>
-    <div id="resultados"></div>
-    <script src="funcion.js"></script>
+
+  
+
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Contacto</a>
+    </nav>
+
+    <header>
+        <h1>Buscator</h1>
+    </header>
+
+    <main>
+
+        <h3><a href="#prueba">¿Qué es Lorem Ipsum?</a></h3>
+
+        <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el
+            texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se
+            dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un
+            libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en
+            documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la
+            creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con
+            software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+
+        <hr>
+
+        <h3><a href="#">¿Por qué lo usamos?</a></h3>
+
+        <p>Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un
+            sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos
+            normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos
+            textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas
+            web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por
+            resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones
+            han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo
+            insertándole humor y cosas por el estilo).</p>
+
+        <form method="post" action="buscar.php" id="formulario-busqueda">
+            <label><input type="checkbox" name="numero"> Número</label>
+            <label><input type="checkbox" name="texto"> Texto</label>
+            <br>
+            <input type="search" name="busqueda" id="busqueda">
+            <input type="submit" value="Buscar">
+            <button>Prueba</button>
+        </form>
+
+        <div id="resultados"></div>
+
+
+   
+
+        <div id="prueba">
+            <img src="img/foto.jpg" alt="Foto">
+        </div>
+
+        <aside>
+            Prueba de costado
+        </aside>
+    </main>
+
+    <footer>
+        <p>Derechos Reservados 2024</p>
+    </footer>
+
+    <script src="buscar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('a[href^="#"]').on('click', function (event) {
+                event.preventDefault();
+
+                $('html, body').animate({
+                    scrollTop: $($.attr(this, 'href')).offset().top
+                }, 500); // Cambia 2000 por el tiempo en milisegundos que desees
+            });
+        });
+    </script>
+
 </body>
 
 </html>
